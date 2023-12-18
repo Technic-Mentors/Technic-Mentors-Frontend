@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import DOMPurify from 'dompurify';
+import { Helmet } from 'react-helmet';
 
 export default function Blogcat() {
     const {postSlug} = useParams()
     const [posts,setPosts] = useState({})
     useEffect(() => {
         const postData = async () => {
-          await fetch(`https://technic-mentors-42fo.vercel.app/api/auth/getpost/${postSlug}`, {
+          await fetch(`https://technic-mentors-backend.vercel.app/api/auth/getpost/${postSlug}`, {
             method: "GET",
           })
             .then((res) => res.json())
@@ -18,6 +19,9 @@ export default function Blogcat() {
       const sanitizedContent = { __html: DOMPurify.sanitize(posts.content) };
   return (
     <div>
+      <Helmet>
+      <meta name="description" content={posts.meta} />
+      </Helmet>
       <div className="home-container">
         <div
           className="background-image3"

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Mobileappdevelopmentservices() {
   useEffect(() => {
@@ -8,6 +9,9 @@ export default function Mobileappdevelopmentservices() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/mobile-app-development-services" />
+      </Helmet>
       <div
           className="background-image1"
           style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -30,9 +34,9 @@ export default function Mobileappdevelopmentservices() {
             <div className="col-lg-6 col-sm-12">
               <div className="section-title text-start" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <h2> Explore Our</h2>
-                <h3>
+                <h1>
                   Cuttin-edge Mobile <span>App Development Services</span>
-                </h3>
+                </h1>
               </div>
               <p style={{ textAlign: "justify" }}>
               Mobile app development services play a pivotal role in elevating businesses, offering a range of benefits. In today’s digital landscape, mobile applications have become preferred by customers over websites due to their portability and convenience. They facilitate effective communication with clients and customers while creating awareness about the business. Moreover, mobile apps provide a competitive edge, allowing businesses to stand out among their rivals. </p>
@@ -41,7 +45,7 @@ export default function Mobileappdevelopmentservices() {
             </div>
             <div className="col-lg-6 col-sm-12">
               <img
-                src="assets\img\web-development-services.gif"
+                src="assets\img\mobile-app-development-services.gif"
                 className="img-fluid"
                 max-width="100%"
                 height="auto"
@@ -97,7 +101,7 @@ export default function Mobileappdevelopmentservices() {
                 </h3>
               </div>
               <p style={{ textAlign: "justify" }}>
-              Mobile app development services have become essential for businesses seeking to leverage the power of mobile technology. With the increasing reliance on smartphones and tablets, businesses are realizing the potential of reaching their customers through mobile apps. These services encompass the entire process of designing, developing, and deploying mobile applications that cater to the unique needs of businesses across various industries. </p>
+              Mobile app development services have become essential for businesses seeking to leverage the power of <a href="https://urdustem.com/en/mobile-marketing-different-tips-and-examples/" target='blank' style={{textDecoration:"none"}}> mobile technology</a>. With the increasing reliance on smartphones and tablets, businesses are realizing the potential of reaching their customers through mobile apps. These services encompass the entire process of designing, developing, and deploying mobile applications that cater to the unique needs of businesses across various industries. </p>
               <p style={{ textAlign: "justify" }}>Our approach to mobile app development is driven by a user-centric mindset. We understand that a well-designed and intuitive app not only enhances user satisfaction but also helps businesses achieve their objectives. From conducting thorough market research and user analysis to crafting compelling user interfaces and implementing advanced functionalities, we ensure that every aspect of the app aligns with our clients’ business goals.
               </p>
             </div>

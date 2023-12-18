@@ -10,7 +10,7 @@ export default function Signup() {
   const handlesubmit = async (e) => {
     e.preventDefault();
     const { email, password } = credentials;
-    const res = await fetch("https://technic-mentors-42fo.vercel.app/api/auth/createadmin", {
+    const res = await fetch("https://technic-mentors-backend.vercel.app/api/auth/createadmin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

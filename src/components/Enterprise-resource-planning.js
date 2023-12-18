@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Calltoaction from "./Calltoaction";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Enterpriseresourceplanning() {
   useEffect(() => {
@@ -9,6 +10,9 @@ export default function Enterpriseresourceplanning() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/erp-solutions" />
+      </Helmet>
       <div
         className="background-image1"
         style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -28,9 +32,9 @@ export default function Enterpriseresourceplanning() {
       <div className="container mt-5">
         <div className="section-title">
           <h2>Manage Every Aspect Of Your Business</h2>
-          <h3>
+          <h1>
             Enterprise <span>Resouce Planning System</span>
-          </h3>
+          </h1>
         </div>
         <p style={{ textAlign: "justify" }}>
           We offer a full range of value-added ERP accounting software and
@@ -75,7 +79,7 @@ export default function Enterpriseresourceplanning() {
               enable informed decision-making, aiding in cost control, revenue
               optimization, and risk management. Moreover, an ERP software
               ensures compliance with ever-evolving financial regulations and
-              standards, safeguarding the organization’s financial integrity.
+              standards, safeguarding the organization’s <a href="https://urdustem.com/use-of-fraud-detection-software-to-safeguard-organizations-from-financial-losses/" target="blank" rel="noopener" style={{textDecoration:"none"}}> financial integrity</a>.
               Ultimately, for large enterprises, an ERP solution is an
               indispensable tool to enhance operational efficiency, maintain
               financial transparency, and achieve sustainable growth in a

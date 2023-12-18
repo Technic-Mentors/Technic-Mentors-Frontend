@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Calltoaction from './Calltoaction'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Pointofsale() {
   useEffect(() => {
@@ -9,6 +10,9 @@ export default function Pointofsale() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/point-of-sale" />
+      </Helmet>
        <div
           className="background-image1"
           style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -28,14 +32,14 @@ export default function Pointofsale() {
         <div className="container mt-5">
               <div className="section-title">
                 <h2>EMPOWERING SEAMLESS BUSINESS TRANSACTIONS</h2>
-                <h3>
+                <h1>
                 Elevate Transactions With Our <span>Point Of Sale Software</span>
-                </h3>
+                </h1>
               </div>
               <p style={{textAlign: "justify" }}>
               In the fast-paced world of modern commerce, the efficiency and effectiveness of your Point of Sale (POS) system can make all the difference. Our cutting-edge POS solution is engineered to empower businesses of all sizes, from bustling retail stores to bustling restaurants. At the heart of our POS system lies a commitment to streamlining your operations and enhancing customer experiences. With intuitive, user-friendly interfaces and seamless integration capabilities, our POS system ensures that your staff can process transactions swiftly, minimizing wait times and enhancing customer satisfaction.
                 <br /> <br />
-                Our POS solution goes beyond traditional transaction processing. It provides you with valuable insights into your business operations. You can access real-time sales data, inventory management, and in-depth analytics to make informed decisions. Additionally, our POS system is highly customizable, adapting to your specific business needs. Whether you need table management for a restaurant or robust inventory tracking for a retail store, our POS system can be tailored to meet your unique requirements. Say goodbye to cumbersome manual processes and embrace the future of point-of-sale technology with our cutting-edge solution.
+                Our POS solution goes beyond traditional transaction processing. It provides you with valuable insights into your business operations. You can access real-time sales data, inventory management, and in-depth analytics to make informed decisions. Additionally, our POS system is highly customizable, adapting to your specific business needs. Whether you need table management for a restaurant or robust inventory tracking for a retail store, our <a href="https://urdustem.com/pos-software-unlocking-business-success-with-the-technors-pos-advantage/" target='blank' rel='noopener' style={{textDecoration:"none"}}> POS system</a> can be tailored to meet your unique requirements. Say goodbye to cumbersome manual processes and embrace the future of point-of-sale technology with our cutting-edge solution.
               </p>
             </div>
 

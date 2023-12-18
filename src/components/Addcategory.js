@@ -20,7 +20,7 @@ export default function Addcategory() {
   }, []);
 
   const fetchExistingCategories = async () => {
-    await fetch("https://technic-mentors-42fo.vercel.app/api/auth/getcategory", {
+    await fetch("https://technic-mentors-backend.vercel.app/api/auth/getcategory", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -62,7 +62,7 @@ export default function Addcategory() {
     cate.innerText = '';
   
     // Add the new category
-    await fetch("https://technic-mentors-42fo.vercel.app/api/auth/category", {
+    await fetch("https://technic-mentors-backend.vercel.app/api/auth/category", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export default function Addcategory() {
       return;
     }
 
-    const res = await fetch("https://technic-mentors-42fo.vercel.app/api/auth/changepassword", {
+    const res = await fetch("https://technic-mentors-backend.vercel.app/api/auth/changepassword", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

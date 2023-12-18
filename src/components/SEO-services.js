@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function SEOservices() {
   useEffect(() => {
@@ -8,6 +9,9 @@ export default function SEOservices() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/seo-services" />
+      </Helmet>
     <div
           className="background-image1"
           style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -16,7 +20,6 @@ export default function SEOservices() {
             <div>
               <h1
                 className="head text-center text-white animate__animated animate__zoomIn"
-                // style={{ fontSize: 60 }}
               >
                  SEO Services
               </h1>
@@ -36,7 +39,7 @@ export default function SEOservices() {
               </div>
               <p style={{ textAlign: "justify" }}>
               SEO services involve optimizing your website to improve its ranking on search engine result pages when users search for products or services related to your business on Google, Bing, or other search engines. The higher your business appears in the search results, the greater the potential for growth and success. We provide top-quality SEO services that can help increase your website’s ranking on Google search results.</p>
-              <p style={{ textAlign: "justify" }}>In today’s competitive market, SEO marketing is more important than ever. It’s not just about being the first result in search rankings anymore. Businesses now need effective strategies to connect with their target audience and convert them into customers.
+              <p style={{ textAlign: "justify" }}>In today’s competitive market, SEO marketing is more important than ever. It’s not just about being the first result in search rankings anymore. Businesses now need effective <a href="https://urdustem.com/en/how-to-create-a-powerful-seo-strategy-for-your-business/" target='blank' style={{textDecoration:"none"}}> SEO strategies </a> to connect with their target audience and convert them into customers.
               </p>
             </div>
             <div className="col-lg-6 col-sm-12">
@@ -56,7 +59,7 @@ export default function SEOservices() {
       <div className='container mt-3 mb-3 how-we-do'>
       <div className="row d-flex text-center justify-content-center" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <div className='section-title'>
-          <h3 className='text-center'> <span style={{color:"black"}}>How We Do It? </span></h3>
+          <h1 className='text-center'> <span style={{color:"black"}}>How We Do It? </span></h1>
         </div>
   <div className="col-md-6 mt-1">
     <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" className='text-center' >

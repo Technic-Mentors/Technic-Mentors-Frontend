@@ -17,7 +17,7 @@ export default function Allcategory() {
   const modalRef = useRef();
 
   const Getcategory = async () => {
-    await fetch("https://technic-mentors-42fo.vercel.app/api/auth/getcategory", {
+    await fetch("https://technic-mentors-backend.vercel.app/api/auth/getcategory", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -30,7 +30,7 @@ export default function Allcategory() {
   },[]);
 
   const viewCategory = async (id) => {
-    await fetch(`https://technic-mentors-42fo.vercel.app/api/auth/getcategory/${id}`, {
+    await fetch(`https://technic-mentors-backend.vercel.app/api/auth/getcategory/${id}`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -58,7 +58,7 @@ export default function Allcategory() {
     });
 
     if (isConfirmed) {
-      await fetch(`https://technic-mentors-42fo.vercel.app/api/auth/delcategory/${id}`, {
+      await fetch(`https://technic-mentors-backend.vercel.app/api/auth/delcategory/${id}`, {
         method: "DELETE",
       });
     }
@@ -66,7 +66,7 @@ export default function Allcategory() {
   };
 
   const editCategory = async (id) => {
-    await fetch(`https://technic-mentors-42fo.vercel.app/api/auth/getcategory/${id}`, {
+    await fetch(`https://technic-mentors-backend.vercel.app/api/auth/getcategory/${id}`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -77,7 +77,7 @@ export default function Allcategory() {
   };
 
   const updateCategory = async () => {
-    await fetch(`https://technic-mentors-42fo.vercel.app/api/auth/editcategory/${editId}`, {
+    await fetch(`https://technic-mentors-backend.vercel.app/api/auth/editcategory/${editId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -117,7 +117,7 @@ export default function Allcategory() {
       return;
     }
 
-    const res = await fetch("https://technic-mentors-42fo.vercel.app/api/auth/changepassword", {
+    const res = await fetch("https://technic-mentors-backend.vercel.app/api/auth/changepassword", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -176,7 +176,7 @@ export default function Allcategory() {
 
         <tbody>
           {category &&
-            category.map((post) => {
+            category.slice().reverse().map((post) => {
               return (
                 <tr>
                   <td>{post.category}</td>

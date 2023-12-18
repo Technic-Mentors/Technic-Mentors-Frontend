@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -12,7 +13,7 @@ export default function Blog() {
 
   const Getallposts = async () => {
     setLoading(true);
-    await fetch("https://technic-mentors-42fo.vercel.app/api/auth/getallposts", {
+    await fetch("https://technic-mentors-backend.vercel.app/api/auth/getallposts", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -64,6 +65,9 @@ export default function Blog() {
 
   return (
     <div className="ps-0" style={{overflowX:"hidden"}}>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/blog" />
+      </Helmet>
       <div className="home-container">
         <div
           className="background-image1"
@@ -118,6 +122,7 @@ export default function Blog() {
         </div>
         <div className="col-md-9" ref={containerRef}>
           <div className="container">
+            <p className="text-center p-2" style={{backgroundColor:"#e3eaf7",display:"inline-block"}}> <strong> Note </strong>: Get insights about the tech world in English and Urdu languages at <a href="https://urdustem.com/" target="blank" rel="noopener"> Urdu Stem</a>.</p>
           <div className="row">
             {filterPosts.slice(0, visiblePosts).map((post) => (
               <div className="col-md-4 col-12 mt-3 mb-3" key={post.id}>

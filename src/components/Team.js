@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Team() {
   useEffect(() => {
@@ -8,6 +9,9 @@ export default function Team() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/team"/>
+      </Helmet>
       <div
         className="background-image1"
         style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -25,9 +29,9 @@ export default function Team() {
         <div className="container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
           <div className="section-title">
             <h2>Team</h2>
-            <h3>
-              Our Executives' <span>Team</span>
-            </h3>
+            <h1>
+              Our Executive's <span>Team</span>
+            </h1>
           </div>
 
           <div className="row">
@@ -555,7 +559,7 @@ export default function Team() {
                 </div>
                 <div className="member-info">
                   <h4>Ata Ur Rehman</h4>
-                  <span>React.Js | Node.Js Developer</span>
+                  <span><a href="https://react.dev/" target="blank" rel="noopener" style={{textDecoration:"none",color:"#777777"}}> React.Js</a> | Node.Js Developer</span>
                 </div>
               </div>
             </div>

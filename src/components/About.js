@@ -3,13 +3,19 @@ import CountUp from "react-countup";
 import Testimonials from "./Testimonials";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function About() {
   useEffect(() => {
+    console.log('useEffect in About component called');
     AOS.init();
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/about" />
+        <meta name="description" content="This is the meta description for my page." />
+      </Helmet>
       <div
         className="background-image1"
         style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -18,7 +24,6 @@ export default function About() {
           <div>
             <h1
               className="head text-center text-white animate__animated animate__zoomIn"
-              // style={{ fontSize: 60 }}
             >
               About Company
             </h1>
@@ -60,11 +65,11 @@ export default function About() {
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              <h3>
+              <h1>
                 Committed to Delivering Excellence: Our IT Services Promise
-              </h3>
+              </h1>
               <p className="fst-italic" style={{ textAlign: "justify" }}>
-                Technic mentors is the best IT consulting company to look at
+                Technic mentors is the best <a href="https://urdustem.com/it-consulting-services-unveiled-navigating-success-with-expert-guidance/" target="blank" rel="noopener" style={{textDecoration:"none"}}> IT consulting company</a> to look at
                 when searching for extraordinary software and technology
                 solutions. We provide value-added and quality products and
                 services. Our team is specialized and experienced and provides

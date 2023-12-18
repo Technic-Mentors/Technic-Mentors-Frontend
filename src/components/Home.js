@@ -5,9 +5,10 @@ import "aos/dist/aos.css";
 import About from "./Aboutcomp";
 import { Link } from "react-router-dom";
 import Testimonials from "./Testimonials";
-import homeHeader from "../img/home-header.png"
-import headerImg from "../img/header-small-img.png"
+import homeHeader from "../img/home-header.png";
+import headerImg from "../img/header-small-img.png";
 import Slider from "react-slick";
+import { Helmet } from 'react-helmet';
 
 export default function Home() {
   const settings = {
@@ -25,25 +26,25 @@ export default function Home() {
           slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2
-        }
-      }
-    ]
+          slidesToScroll: 2,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
@@ -51,6 +52,9 @@ export default function Home() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com" />
+      </Helmet>
       {/* Start Header Section */}
       <section
         id="hero"
@@ -65,12 +69,27 @@ export default function Home() {
         >
           <div className="row justify-content-center align-items-center">
             <div className="col-md-6">
-              <h1 style={{ color: "white", fontWeight: "bolder" }} className="mb-2">
-                Accelerate Your <br /><span style={{ color: "black", fontWeight: "bolder", fontSize: "135%" }}>Business Growth</span> <br/>With Our IT Services
+              <h1
+                style={{ color: "white", fontWeight: "bolder" }}
+                className="mb-2"
+              >
+                Accelerate Your <br />
+                <span
+                  style={{
+                    color: "black",
+                    fontWeight: "bolder",
+                    fontSize: "135%",
+                  }}
+                >
+                  Business Growth
+                </span>{" "}
+                <br />
+                With Our IT Services
               </h1>
               <p className="mb-4 mt-2" style={{ color: "white" }}>
                 Helping you grow your business by enabling technology for your
-                business. We will be your technology partners to make your business standout outplay the competitors!
+                business. We will be your technology partners to make your
+                business standout outplay the competitors!
               </p>
               <div className="d-flex text-start">
                 <Link to="/about" className="btn headStart text-white scrollto">
@@ -79,7 +98,7 @@ export default function Home() {
                 <a
                   href="https://www.youtube.com/watch?v=ZX3JdYyJlds"
                   className="glightbox btn-watch-video"
-                  style={{ color: "white",textDecoration:"none" }}
+                  style={{ color: "white", textDecoration: "none" }}
                 >
                   <i
                     className="bi bi-play-circle me-2"
@@ -90,12 +109,12 @@ export default function Home() {
               </div>
             </div>
             <div className="col-md-5">
-                <img
-                  src={headerImg}
-                  className="img-fluid mb-3"
-                  alt="header-img"
-                />
-              </div>
+              <img
+                src={headerImg}
+                className="img-fluid mb-3"
+                alt="header-img"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -109,12 +128,15 @@ export default function Home() {
       {/* Start Services Section */}
 
       <section id="services" className="services services-bg" style={{}}>
-        <div className="container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div
+          className="container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <div className="section-title">
             <h2>Services</h2>
-            
-              We Are Dedicated To <span>Serve You All Time</span>
-            
+           <p> We Are Dedicated To <span>Serve You All Time</span></p>
             <p>
               Explore a comprehensive range of IT solutions designed to empower
               your business and drive success.
@@ -124,16 +146,16 @@ export default function Home() {
           <div className="row">
             <div
               className="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
               data-aos-delay="100"
             >
               <div className="icon-box">
                 <div className="icon">
                   <i className="bi bi-globe"></i>
                 </div>
-                <h4>
-                  Web Design & Development
-                </h4>
+                <h4>Web Design & Development</h4>
                 <p>
                   Elevate your online presence with captivating web designs and
                   seamless development expertise.
@@ -141,10 +163,7 @@ export default function Home() {
                 <div className=" mt-4">
                   <Link to="/web-development-services">
                     {" "}
-                    <button
-                      type="button"
-                      className="btn btn-outline-primary "
-                    >
+                    <button type="button" className="btn btn-outline-primary ">
                       Details
                     </button>
                   </Link>
@@ -154,7 +173,9 @@ export default function Home() {
 
             <div
               className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
-              data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
               data-aos-delay="200"
             >
               <div className="icon-box different-card">
@@ -162,19 +183,16 @@ export default function Home() {
                   <i className="bi bi-window-sidebar"></i>
                 </div>
                 <h4>
-                  <span style={{color: "white"}}>Software Development</span>
+                  <span style={{ color: "white" }}>Software Development</span>
                 </h4>
-                <p style={{color: "white"}}>
+                <p style={{ color: "white" }}>
                   From concept to code, we craft tailored software solutions
                   that drive efficiency and innovation.
                 </p>
                 <div className=" mt-4">
                   <Link to="/software-development-services">
                     {" "}
-                    <button
-                      type="button"
-                      className="btn btn-outline-light"
-                    >
+                    <button type="button" className="btn btn-outline-light">
                       Details
                     </button>
                   </Link>
@@ -184,16 +202,16 @@ export default function Home() {
 
             <div
               className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0"
-              data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
               data-aos-delay="300"
             >
               <div className="icon-box">
                 <div className="icon">
                   <i className="bi bi-phone-flip"></i>
                 </div>
-                <h4>
-                  Mobile Apps Development
-                </h4>
+                <h4>Mobile Apps Development</h4>
                 <p>
                   Innovative mobile development for seamless experiences,
                   enhancing engagement and digital footprint.
@@ -201,10 +219,7 @@ export default function Home() {
                 <div className=" mt-4">
                   <Link to="/mobile-app-development-services">
                     {" "}
-                    <button
-                      type="button"
-                      className="btn btn-outline-primary "
-                    >
+                    <button type="button" className="btn btn-outline-primary ">
                       Details
                     </button>
                   </Link>
@@ -214,7 +229,9 @@ export default function Home() {
 
             <div
               className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
-              data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
               data-aos-delay="100"
             >
               <div className="icon-box different-card">
@@ -222,18 +239,15 @@ export default function Home() {
                   <i className="bi bi-megaphone"></i>
                 </div>
                 <h4>
-                  <span style={{color: "white"}}>Digital Marketing</span>
+                  <span style={{ color: "white" }}>Digital Marketing</span>
                 </h4>
-                <p style={{color: "white"}}>
+                <p style={{ color: "white" }}>
                   Strategic digital marketing amplifying your brand, driving
                   growth, and captivating your target audience.
                 </p>
                 <div className=" mt-4">
                   <Link to="/digital-marketing-services">
-                    <button
-                      type="button"
-                      className="btn btn-outline-light"
-                    >
+                    <button type="button" className="btn btn-outline-light">
                       Details
                     </button>
                   </Link>
@@ -243,16 +257,16 @@ export default function Home() {
 
             <div
               className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
-              data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
               data-aos-delay="200"
             >
               <div className="icon-box">
                 <div className="icon">
                   <i className="bi bi-search-heart"></i>
                 </div>
-                <h4>
-                  SEO Services
-                </h4>
+                <h4>SEO Services</h4>
                 <p>
                   Optimize visibility and drive traffic with our result-oriented
                   SEO strategies and expert implementation.
@@ -260,10 +274,7 @@ export default function Home() {
                 <div className=" mt-4">
                   <Link to="/seo-services">
                     {" "}
-                    <button
-                      type="button"
-                      className="btn btn-outline-primary "
-                    >
+                    <button type="button" className="btn btn-outline-primary ">
                       Details
                     </button>
                   </Link>
@@ -273,7 +284,9 @@ export default function Home() {
 
             <div
               className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
-              data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
               data-aos-delay="300"
             >
               <div className="icon-box different-card">
@@ -281,18 +294,15 @@ export default function Home() {
                   <i className="bi bi-palette"></i>
                 </div>
                 <h4>
-                  <span style={{color: "white"}}>Graphics Designing</span>
+                  <span style={{ color: "white" }}>Graphics Designing</span>
                 </h4>
-                <p style={{color: "white"}}>
+                <p style={{ color: "white" }}>
                   Impactful graphics translating ideas into stunning designs,
                   leaving lasting impressions for your visual needs.
                 </p>
                 <div className=" mt-4">
                   <Link to="/graphics-designing-services">
-                    <button
-                      type="button"
-                      className="btn btn-outline-light "
-                    >
+                    <button type="button" className="btn btn-outline-light ">
                       Details
                     </button>
                   </Link>
@@ -300,7 +310,14 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-4 d-flex justify-content-center align-items-center">
-                  <Link to="/services"><button type="button" className="btn mt-4 btn-outline-primary  ">Explore All Services</button></Link>
+              <Link to="/services">
+                <button
+                  type="button"
+                  className="btn mt-4 btn-outline-primary  "
+                >
+                  Explore All Services
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -310,7 +327,6 @@ export default function Home() {
 
       {/* End About Section */}
 
-
       {/* Start Counter Section */}
 
       <section
@@ -318,10 +334,15 @@ export default function Home() {
         className="counts"
         style={{ backgroundColor: "#f6f9fe" }}
       >
-        <div className="container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div
+          className="container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <div className="row pt-3">
             <div className="col-lg-3 col-md-6">
-              <div className="count-box" style={{backgroundColor:"white"}}>
+              <div className="count-box" style={{ backgroundColor: "white" }}>
                 <i className="bi bi-emoji-smile"></i>
                 <CountUp end={2013} duration={2} />
                 <p className="m-top-8">Year Of Establishment</p>
@@ -329,7 +350,7 @@ export default function Home() {
             </div>
 
             <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
-              <div className="count-box" style={{backgroundColor:"white"}}>
+              <div className="count-box" style={{ backgroundColor: "white" }}>
                 <i className="bi bi-journal-richtext"></i>
                 <CountUp end={150} duration={2} />
                 <p className="m-top-8">Clients Worldwide</p>
@@ -337,7 +358,7 @@ export default function Home() {
             </div>
 
             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-              <div className="count-box" style={{backgroundColor:"white"}}>
+              <div className="count-box" style={{ backgroundColor: "white" }}>
                 <i className="bi bi-headset"></i>
                 <CountUp end={8} duration={5} />
                 <p className="m-top-8">Countries With Active Client</p>
@@ -345,7 +366,7 @@ export default function Home() {
             </div>
 
             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-              <div className="count-box" style={{backgroundColor:"white"}}>
+              <div className="count-box" style={{ backgroundColor: "white" }}>
                 <i className="bi bi-people"></i>
                 <CountUp end={500} duration={5} />
                 <p className="m-top-8">Projects</p>
@@ -362,63 +383,63 @@ export default function Home() {
       <section
         id="clients"
         className="clients section-bg py-5"
-        style={{ backgroundColor: "#f6f9fe" , marginTop:"-60px" }}
+        style={{ backgroundColor: "#f6f9fe", marginTop: "-60px" }}
       >
         <div className="section-title">
-            <h3 className="text">
+          <h3 className="text">
             Our <span>Clients</span>
-            </h3>
-          </div>
+          </h3>
+        </div>
         {/* <h2 ></h2> */}
         {/* <h2>Our Clients</h2> */}
         <div className="container">
-        <Slider {...settings}>
+          <Slider {...settings}>
             <img
-                src="assets\img\clients\client-alahadmarketing-logo.png"
-                alt="client-logo-alahad-marketing"
-              />
+              src="assets\img\clients\client-alahadmarketing-logo.png"
+              alt="client-logo-alahad-marketing"
+            />
             <img
-                src="assets\img\clients\client-getwell-logo.webp"
-                alt="client-getwell-logo"
-              />
+              src="assets\img\clients\client-getwell-logo.webp"
+              alt="client-getwell-logo"
+            />
             <img
-                src="assets\img\clients\client-lettechnologies-logo.png"
-                alt="client-lettechnologies-logo"
-              />
+              src="assets\img\clients\client-lettechnologies-logo.png"
+              alt="client-lettechnologies-logo"
+            />
             <img
-                src="assets\img\clients\K2Land-LOGO.png"
-                alt="client-lettechnologies-logo"
-              />
+              src="assets\img\clients\K2Land-LOGO.png"
+              alt="client-lettechnologies-logo"
+            />
             <img
-                src="assets\img\clients\client-sheikhlaw-logo.png"
-                alt="client-sheikhlawcompany-logo"
-              />
+              src="assets\img\clients\client-sheikhlaw-logo.png"
+              alt="client-sheikhlawcompany-logo"
+            />
             <img
-                src="assets\img\clients\client-danish-groupco-logo.png"
-                alt="client-danishgrouco-logo"
-              />
+              src="assets\img\clients\client-danish-groupco-logo.png"
+              alt="client-danishgrouco-logo"
+            />
             <img
-                src="assets\img\clients\client-alahadmarketing-logo.png"
-                alt="client-logo-alahad-marketing"
-              />
+              src="assets\img\clients\client-alahadmarketing-logo.png"
+              alt="client-logo-alahad-marketing"
+            />
             <img
-                src="assets\img\clients\client-getwell-logo.webp"
-                alt="client-getwell-logo"
-              />
+              src="assets\img\clients\client-getwell-logo.webp"
+              alt="client-getwell-logo"
+            />
             <img
-                src="assets\img\clients\client-lettechnologies-logo.png"
-                alt="client-lettechnologies-logo"
-              />
+              src="assets\img\clients\client-lettechnologies-logo.png"
+              alt="client-lettechnologies-logo"
+            />
             <img
-                src="assets\img\clients\client-sheikhlaw-logo.png"
-                alt="client-sheikhlawcompany-logo"
-              />
+              src="assets\img\clients\client-sheikhlaw-logo.png"
+              alt="client-sheikhlawcompany-logo"
+            />
             <img
-                src="assets\img\clients\client-danish-groupco-logo.png"
-                alt="client-danishgrouco-logo"
-              />
-        </Slider>
-      </div>
+              src="assets\img\clients\client-danish-groupco-logo.png"
+              alt="client-danishgrouco-logo"
+            />
+          </Slider>
+        </div>
       </section>
 
       {/* End Clients Logo Section */}
@@ -426,25 +447,38 @@ export default function Home() {
       {/* Start Products Section */}
 
       <section id="featured-services" className="featured-services">
-        <div className="container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-        <div className='section-title text-center mb-3' data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <h2> Our Products</h2>
-                    Explore Our <span>Best Software Products</span>
-                    </div>
+        <div
+          className="container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
+          <div
+            className="section-title text-center mb-3"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
+            <h2> Our Products</h2>
+          <p>  Explore Our <span>Best Software Products</span></p>
+          </div>
           <div className="row">
             <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-              <Link to="/education-management-system" style={{textDecoration:"none"}}>
+              <Link
+                to="/education-management-system"
+                style={{ textDecoration: "none" }}
+              >
                 <div
                   className="icon-box product-icon-box"
-                  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
                   data-aos-delay="100"
                 >
                   <div className="icon">
                     <i className="bi bi-mortarboard"></i>
                   </div>
-                  <h4 className="title">
-                    Education Management System
-                  </h4>
+                  <h4 className="title">Education Management System</h4>
                   <p className="description">
                     An all-in-one solution for your school mangement activites
                   </p>
@@ -454,19 +488,24 @@ export default function Home() {
             </div>
 
             <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-              <Link to="/erp-solutions" style={{textDecoration:"none"}}>
+              <Link to="/erp-solutions" style={{ textDecoration: "none" }}>
                 <div
                   className="icon-box product-icon-box different-card"
-                  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
                   data-aos-delay="200"
                 >
                   <div className="icon">
-                    <i className="bi bi-building" style={{color: "white"}}></i>
+                    <i
+                      className="bi bi-building"
+                      style={{ color: "white" }}
+                    ></i>
                   </div>
                   <h4 className="title text-white">
                     Enterprise Resource Planning
                   </h4>
-                  <p className="description" style={{color: "white"}}>
+                  <p className="description" style={{ color: "white" }}>
                     Seamlessly manage all resources of your large enterprise
                   </p>
                 </div>
@@ -474,18 +513,21 @@ export default function Home() {
             </div>
 
             <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-              <Link to="/ecommerce-solutions" style={{textDecoration:"none"}}>
+              <Link
+                to="/ecommerce-solutions"
+                style={{ textDecoration: "none" }}
+              >
                 <div
                   className="icon-box product-icon-box"
-                  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
                   data-aos-delay="300"
                 >
                   <div className="icon">
                     <i className="bi bi-bag-check"></i>
                   </div>
-                  <h4 className="title">
-                   Ecommerce Solutions
-                  </h4>
+                  <h4 className="title">Ecommerce Solutions</h4>
                   <p className="description">
                     Leverage the Ecommerce solutions for the businesses of all
                     sizes, to seamlessly selling your products online
@@ -495,18 +537,18 @@ export default function Home() {
             </div>
 
             <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-              <Link to="/point-of-sale" style={{textDecoration:"none"}}>
+              <Link to="/point-of-sale" style={{ textDecoration: "none" }}>
                 <div
                   className="icon-box product-icon-box"
-                  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
                   data-aos-delay="400"
                 >
                   <div className="icon">
                     <i className="bi bi-pc-display-horizontal"></i>
                   </div>
-                  <h4 className="title">
-                    Point of Sale
-                  </h4>
+                  <h4 className="title">Point of Sale</h4>
                   <p className="description">
                     Manage your daily sales, transactions, inventory and monitor
                     your cash flow with our POS system
@@ -516,8 +558,12 @@ export default function Home() {
             </div>
 
             <div className=" mt-5 d-flex justify-content-center align-items-center">
-                  <Link to="/products"><button type="button" className="btn btn-outline-primary ">Explore All Products</button></Link>
-                </div>
+              <Link to="/products">
+                <button type="button" className="btn btn-outline-primary ">
+                  Explore All Products
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -532,18 +578,23 @@ export default function Home() {
       {/* Start Team Section */}
 
       <section id="team" className="team section-bg">
-        <div className="container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div
+          className="container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <div className="section-title">
             <h2>Team</h2>
-            
-              Meet Our <span>Team of Executives</span>
-            
+           <p> Meet Our <span>Team of Executives</span></p>
             <p>Meet the team that converts your ideas into reality.</p>
           </div>
           <div className="row d-flex justify-content-center align-items-center">
             <div
               className="col-lg-3 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
               data-aos-delay="100"
             >
               <div className="member">
@@ -578,7 +629,9 @@ export default function Home() {
 
             <div
               className="col-lg-3 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
               data-aos-delay="200"
             >
               <div className="member">
@@ -613,7 +666,9 @@ export default function Home() {
 
             <div
               className="col-lg-3 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
               data-aos-delay="300"
             >
               <div className="member">
@@ -648,7 +703,9 @@ export default function Home() {
 
             <div
               className="col-lg-3 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
               data-aos-delay="400"
             >
               <div className="member">
@@ -683,10 +740,7 @@ export default function Home() {
             <div className=" mt-4 d-flex justify-content-center align-items-center">
               <Link to="/team">
                 {" "}
-                <button
-                  type="button"
-                  className="btn btn-outline-primary "
-                >
+                <button type="button" className="btn btn-outline-primary ">
                   View More
                 </button>
               </Link>
@@ -700,12 +754,15 @@ export default function Home() {
       {/* Start FAQ Section */}
 
       <section id="faq" className="faq section-bg ">
-        <div className="container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div
+          className="container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <div className="section-title">
             <h2>F.A.Q</h2>
-            
-              Frequently Asked <span>Questions</span>
-            
+           <p> Frequently Asked <span>Questions</span> </p>
             <p>
               Our curated list of the most frequently asked questions about us.
             </p>
@@ -870,7 +927,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="faq-bg" ></div>
+      <div className="faq-bg"></div>
     </div>
   );
 }

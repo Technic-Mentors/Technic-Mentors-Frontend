@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Calltoaction from './Calltoaction'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Educationmanagementsystem() {
   useEffect(() => {
@@ -9,6 +10,9 @@ export default function Educationmanagementsystem() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/education-management-system" />
+      </Helmet>
      <div
           className="background-image1"
           style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -29,12 +33,12 @@ export default function Educationmanagementsystem() {
         <div className="container mt-5">
               <div className="section-title">
                 <h2>Manage Your School Efficiently</h2>
-                <h3>
+                <h1>
                   Education <span>Management System</span>
-                </h3>
+                </h1>
               </div>
               <p style={{textAlign: "justify"}}>
-                CapoBrain is a school management system that simplifies
+               <a href="https://capobrain.com/" target='blank' rel='noopener' style={{textDecoration:"none"}}> CapoBrain</a> is a school management system that simplifies
                 administrative tasks and facilitates communication between
                 teachers, staff, and parents. Its intuitive interface and robust
                 capabilities make managing student information, scheduling

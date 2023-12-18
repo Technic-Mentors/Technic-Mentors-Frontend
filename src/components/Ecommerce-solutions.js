@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Calltoaction from './Calltoaction'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Educationmanagementsystem() {
   useEffect(() => {
@@ -9,6 +10,9 @@ export default function Educationmanagementsystem() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/ecommerce-solutions" />
+      </Helmet>
       <div
           className="background-image1"
           style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -29,16 +33,16 @@ export default function Educationmanagementsystem() {
         <div className="container mt-5">
               <div className="section-title">
                 <h2>Online Selling Made Easy</h2>
-                <h3>
+                <h1>
                   Explore Our <span>Ecommerce Solutions</span>
-                </h3>
+                </h1>
               </div>
               <p style={{textAlign: "justify"}}>
               a robust online presence is essential for businesses of all sizes. Our Ecommerce Solutions are designed to help your business thrive in the competitive online landscape. We offer a user-friendly platform with seamless navigation, ensuring that your customers enjoy a smooth shopping experience. What sets our Ecommerce Solutions apart is the focus on customization. We understand that your brand is unique, and we provide you with the tools to reflect your identity in every aspect of your online store, from the color scheme to product presentation.
 
 
                 <br /> <br />
-                We understand that businesses evolve, and our Ecommerce Solutions are designed to evolve with you. Our platform is highly scalable, allowing you to add new features, expand your product offerings, and adapt to the changing needs of your business. We offer competitive pricing that fits your budget while delivering exceptional value. With our Ecommerce Solutions, you don't need to compromise between affordability and quality.
+                 We understand that businesses evolve, and our Ecommerce Solutions are designed to evolve with you. Our platform is highly scalable, allowing you to add new features, expand your product offerings, and adapt to the changing needs of your business. We offer competitive pricing that fits your budget while delivering exceptional value. With our Ecommerce Solutions, you don't need to compromise between affordability and quality. Looking for the best <a href="https://urdustem.com/empowering-online-businesses-with-a-professional-ecommerce-service-provider/" target='blank' rel='noopener' style={{textDecoration:"none"}}> ecommerce service provider</a>? Look no further, Technic Mentors will help you sell online seamlessly. 
               </p>
             </div>
 

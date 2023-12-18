@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Softwaredevelopmentservices() {
   useEffect(() => {
@@ -8,6 +9,9 @@ export default function Softwaredevelopmentservices() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/software-development-services" />
+      </Helmet>
       <div
           className="background-image1"
           style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -30,9 +34,9 @@ export default function Softwaredevelopmentservices() {
             <div className="col-lg-6 col-sm-12">
               <div className="section-title text-start" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <h2> Making Businesses Flourish With</h2>
-                <h3>
+                <h1>
                    Our <span>Software Development Services</span>
-                </h3>
+                </h1>
               </div>
               <p style={{ textAlign: "justify" }}>
               Software development services encompass a series of essential steps involving the developing business solutions. These steps include identifying needs, analyzing requirements, designing, developing, testing, and deploying. </p>
@@ -96,7 +100,7 @@ export default function Softwaredevelopmentservices() {
                 </h3>
               </div>
               <p style={{ textAlign: "justify" }}>
-              Our team of skilled software engineers possesses extensive expertise in crafting robust software applications. With a wealth of experience in various verticals and business domains, including e-Commerce, e-Learning, Production management, Finance, and Enterprise-level applications, we offer comprehensive software development services tailored to meet your specific needs. The seasoned professionals at Technic Mentors excel in delivering cutting-edge solutions. We aim to develop solutions that empower your business to thrive in today’s competitive landscape. </p>
+              Our team of skilled software engineers possesses extensive expertise in crafting robust software applications. With a wealth of experience in various verticals and business domains, including e-Commerce, <a href="https://capobrain.com/" target="blank" rel="noopener" style={{textDecoration:"none"}}> e-Learning</a>, Production management, Finance, and Enterprise-level applications, we offer comprehensive software development services tailored to meet your specific needs. The seasoned professionals at Technic Mentors excel in delivering cutting-edge solutions. We aim to develop solutions that empower your business to thrive in today’s competitive landscape. </p>
               <p style={{ textAlign: "justify" }}>We stand out as the leading software house in Pakistan, renowned for delivering unparalleled software development services. Whether you require web applications, desktop software, or customized software solutions, we are dedicated to providing top-quality solutions.</p>
               <p style={{ textAlign: "justify" }}>Our utmost priority is our clients, and we uphold this commitment by consistently delivering exceptional software solutions and comprehensive IT services. We have a vision that extends beyond Pakistan. We strive to establish ourselves as an international leader in the software industry, reaching new heights and setting new standards of excellence.
               </p>

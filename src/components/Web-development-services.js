@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Webdevelopmentservices() {
   useEffect(() => {
@@ -8,6 +9,9 @@ export default function Webdevelopmentservices() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/web-development-services" />
+      </Helmet>
       <div
           className="background-image1"
           style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -31,9 +35,9 @@ export default function Webdevelopmentservices() {
             <div className="col-lg-6 col-sm-12">
               <div className="section-title text-start" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <h2> Our Services</h2>
-                <h3>
-                  Grow Your Business With Our <span>Top IT Services</span>
-                </h3>
+                <h1>
+                  Grow Your Business With Our <span>Web Development Services</span>
+                </h1>
               </div>
               <p style={{ textAlign: "justify" }}>
               Web development services encompass two essential steps: web design and web development. Web design focuses on the aesthetics and visual appeal of your website, while web development emphasizes its functionality and performance. Now, you might be wondering: Why are web design and web development services crucial for your business? </p>
@@ -91,7 +95,7 @@ export default function Webdevelopmentservices() {
                 </h3>
               </div>
               <p style={{ textAlign: "justify" }}>
-              In today’s competitive landscape, a compelling website acts as a powerful tool that enables you to attract and engage potential clients, ultimately leading to business growth and success. By investing in top-notch web development services, you position yourself to capture the attention of your desired clientele and convert them into loyal customers. </p>
+              In today’s competitive landscape, a <a href="https://urdustem.com/unlocking-different-features-of-cool-websites/" target='blank' rel='noopener' style={{textDecoration:"none"}}> compelling website</a> acts as a powerful tool that enables you to attract and engage potential clients, ultimately leading to business growth and success. By investing in top-notch web development services, you position yourself to capture the attention of your desired clientele and convert them into loyal customers. </p>
               <p style={{ textAlign: "justify" }}>Partner with our team of experienced web developers who possess the expertise to craft sophisticated and SEO-friendly websites. We are dedicated to creating exceptional online experiences that seamlessly combine captivating designs with seamless functionality. Elevate your business’s online presence with our comprehensive web services, and gain a competitive edge in the digital arena. Embrace the endless possibilities that a well-designed and meticulously developed website can bring to your brand. Start your journey toward online success today.
               </p>
             </div>

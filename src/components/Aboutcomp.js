@@ -52,7 +52,7 @@ export default function About() {
                 Committed to Delivering Excellence: Our IT Services Promise
               </h3>
               <p className="fst-italic" style={{ textAlign: "justify" }}>
-                Technic mentors is the best IT consulting company to look at
+                Technic mentors is the best <a href="https://urdustem.com/it-consulting-services-unveiled-navigating-success-with-expert-guidance/" target="blank" rel="noopener" style={{textDecoration:"none"}}> IT consulting company</a> to look at
                 when searching for extraordinary software and technology
                 solutions. We provide value-added and quality products and
                 services. Our team is specialized and experienced and provides

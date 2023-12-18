@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Postnavigation from "./Postnavigation";
 import { Outlet } from "react-router-dom";
 import Admindata from "./Admindata";
+import header from "../img/bg-header.png"
 
 export default function Admin() {
   const [credentials, setCredentials] = useState({
@@ -27,21 +27,22 @@ export default function Admin() {
   };
   return (
     <div className="container-fluid ps-0">
-      <div
+      <div className="home-container">
+        <div
           className="background-image1"
-          style={{ backgroundImage: `url(${"assets/img/bg-header.png"})` }}
+          style={{ backgroundImage: `url(${header})` }}
         >
           <div className="color-overlay1 d-flex align-items-center justify-content-center">
             <div>
               <h1
                 className="head text-center text-white animate__animated animate__zoomIn"
-                // style={{ fontSize: 60 }}
               >
                 Technic Mentors : Admin Panel
               </h1>
             </div>
           </div>
         </div>
+      </div>
       
       <div className="row mt-3" style={{ backgroundColor: "rgb(246 249 255)" }}>
         <div className=" col-md-2">

@@ -11,7 +11,7 @@ export default function Login() {
       const handlesubmit = async (e) => {
         e.preventDefault();
         const { email, password } = credentials;
-        const res = await fetch("https://technic-mentors-42fo.vercel.app/api/auth/login", {
+        const res = await fetch("https://technic-mentors-backend.vercel.app/api/auth/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

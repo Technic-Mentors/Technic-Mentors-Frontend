@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Graphicsdesigningservices() {
   useEffect(() => {
@@ -8,6 +9,9 @@ export default function Graphicsdesigningservices() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/graphics-designing-services" />
+      </Helmet>
        <div
           className="background-image1"
           style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -30,9 +34,9 @@ export default function Graphicsdesigningservices() {
             <div className="col-lg-6 col-sm-12">
               <div className="section-title text-start" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <h2> Brand Your Business With </h2>
-                <h3>
+                <h1>
                   Our <span>Graphics Designing Services</span>
-                </h3>
+                </h1>
               </div>
               <p style={{ textAlign: "justify" }}>
               Graphics designing services involve the skilled creation of visual content aimed at effectively conveying messages. Designers employ typography and graphics to meet user needs and emphasize the logical presentation of elements in interactive designs. By utilizing visual hierarchy and page layout techniques, they enhance the user experience.</p>
@@ -65,7 +69,7 @@ export default function Graphicsdesigningservices() {
       <li className="services-list" style={{listStyle: "none", textAlign: "left",color:"#106eea"}}> <h4> Print & Packages Design Services</h4></li>
       <p style={{textAlign:"justify"}}> Our print and packaging designs are a perfect blend of creativity and functionality, creativity and functionality, ensuring your products stand out on the shelf.</p>
       <li className="services-list" style={{listStyle: "none", textAlign: "left",color:"#106eea"}}> <h4> Web Graphics Services</h4></li>
-      <p style={{textAlign:"justify"}}>Our web graphics enhance your online presence, ensuring your website is user-friendly, visually appealing, user-friendly, and in harmony with your brand.</p>
+      <p style={{textAlign:"justify"}}>Our web graphics enhance your online presence, ensuring your website is user-friendly, visually appealing, user-friendly, and <a href="https://urdustem.com/brand-storytelling-crafting-authentic-narratives-for-business-success/" target='blank' rel='noopener' style={{textDecoration:"none"}}> in harmony with your brand</a>.</p>
       <li className="services-list" style={{listStyle: "none", textAlign: "left",color:"#106eea"}}> <h4> Visual Identity Packaging Services</h4></li>
       <p style={{textAlign:"justify"}}>We design visual identities that communicate your brand's unique story and values, creating a consistent and compelling brand image.</p>
       <li className="services-list" style={{listStyle: "none", textAlign: "left",color:"#106eea"}}> <h4> Business Cards And Flyers Services</h4></li>

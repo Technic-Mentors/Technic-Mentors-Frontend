@@ -3,18 +3,19 @@ import React from 'react'
 export default function WebsitePortfolio() {
   return (
     <div>
-      <div
-        className="background-image1"
-        style={{ backgroundImage: `url(${"assets/img/bg-header.png"})` }}
-      >
-        <div className="color-overlay1 d-flex align-items-center justify-content-center">
-          <div>
-            <h1
-              className="head text-center text-white animate__animated animate__zoomIn"
-              // style={{ fontSize: 60 }}
-            >
-              Website Portfolio
-            </h1>
+      <div className="home-container">
+        <div
+          className="background-image1"
+          style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
+        >
+          <div className="color-overlay1 d-flex align-items-center justify-content-center">
+            <div>
+              <h1
+                className="head text-center text-white animate__animated animate__zoomIn"
+              >
+                Website Portfolio
+              </h1>
+            </div>
           </div>
         </div>
       </div>

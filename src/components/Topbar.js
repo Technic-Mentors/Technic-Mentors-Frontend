@@ -14,7 +14,7 @@ export default function Topbar() {
       >
         <div className="row gx-0 d-flex align-items-center">
           <div className="col-md-8 d-flex text-lg-start mb-2 mb-lg-0">
-                <p className="m-0 mx-3 text-white">
+                <p className="m-0 mx-1 text-white">
                   <i className="fa fa-envelope-open me-1"></i>
                   info@technicmentors.com
                 </p>

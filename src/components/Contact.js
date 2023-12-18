@@ -4,6 +4,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Contact() {
   useEffect(() => {
@@ -78,6 +79,9 @@ export default function Contact() {
 
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/contact" />
+      </Helmet>
       <div
         className="background-image1"
         style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -100,9 +104,9 @@ export default function Contact() {
       >
         <div className="container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
           <div className="section-title">
-            <h3>
+            <h1>
               <span>Reach Out To Us</span>
-            </h3>
+            </h1>
             <p>
               Have any query? Our support team is always there to respond you.
               Just drop a message here and we will get back to you.
@@ -128,7 +132,7 @@ export default function Contact() {
               >
                 <i className="bx bx-envelope"></i>
                 <h3>Email Us</h3>
-                <p>info@technicmentors.com</p>
+               <a href="mailto:info@technicmentors.com" style={{textDecoration:"none",color:"#777777"}}> <p>info@technicmentors.com</p></a>
               </div>
             </div>
 
@@ -168,7 +172,7 @@ export default function Contact() {
                 )}
 
                 <div className="row">
-                  <div className="col">
+                  <div className="form-group">
                     <input
                       type="text"
                       name="name"
@@ -179,7 +183,7 @@ export default function Contact() {
                     />
                     <div id="nameI" style={{ color: "red" }}></div>
                   </div>
-                  <div className="col form-group">
+                  <div className="form-group">
                     <input
                       type="email"
                       className="form-control"

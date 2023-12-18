@@ -19,6 +19,7 @@ export default function Blogcategory() {
     content: "",
     category: "",
     image: null,
+    meta:""
   });
   const [password, setPassword] = useState({
     email: "",
@@ -74,13 +75,14 @@ export default function Blogcategory() {
       return;
     }
 
-    const { title, category } = credentials;
+    const { title, category, meta } = credentials;
     const formData = new FormData();
     formData.append("title", title);
     formData.append("content", editorHtml);
     formData.append("category", category);
+    formData.append("meta", meta);
     formData.append("slug", slug);
-    await fetch("https://technic-mentors-42fo.vercel.app/api/auth/createpost", {
+    await fetch("https://technic-mentors-backend.vercel.app/api/auth/createpost", {
       method: "POST",
       body: formData,
     });
@@ -94,6 +96,7 @@ export default function Blogcategory() {
       title: "",
       content: "",
       category: "",
+      meta:""
     });
     setSlug("");
     setEditorHtml("");
@@ -105,7 +108,7 @@ export default function Blogcategory() {
 
   const Getcategory = async () => {
     await fetch(
-      "https://technic-mentors-42fo.vercel.app/api/auth/getcategory",
+      "https://technic-mentors-backend.vercel.app/api/auth/getcategory",
       {
         method: "GET",
       }
@@ -149,7 +152,7 @@ export default function Blogcategory() {
       return;
     }
 
-    const res = await fetch("https://technic-mentors-42fo.vercel.app/api/auth/changepassword", {
+    const res = await fetch("https://technic-mentors-backend.vercel.app/api/auth/changepassword", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -251,7 +254,18 @@ export default function Blogcategory() {
                 onChange={(e) => setSlug(e.target.value)}
                 placeholder="Title Here"
               />
-
+<label className="mt-3" htmlFor="text">
+                Meta Description
+              </label>
+              <input
+                className="form-control"
+                type="text"
+                name="meta"
+                value={credentials.meta}
+                onChange={onchange}
+                placeholder="Meta Description"
+              />
+              <div id="metaI" style={{ color: "red" }}></div>
               <label className="mt-3" htmlFor="content">
                 Blog Content
               </label>
@@ -393,3 +407,4 @@ export default function Blogcategory() {
     </div>
   );
 }
+

@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 export default function Portfolio() {
   useEffect(() => {
@@ -12,6 +13,9 @@ export default function Portfolio() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <link rel="canonical" href="https://technicmentors.com/our-portfolio" />
+      </Helmet>
       <div
         className="background-image1"
         style={{ backgroundImage: `url(${"assets/img/bg-header.webp"})` }}
@@ -34,9 +38,9 @@ export default function Portfolio() {
             <div className="col-md-6">
               <div className="section-title text-start" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <h2> Our past Work Speaks Of Our Quality</h2>
-                <h3>
+                <h1>
                   Explore Our <span>Portfolio</span>
-                </h3>
+                </h1>
               </div>
               <p style={{ textAlign: "justify" }}>
                 Technic Mentors is more than a software company; we're your
@@ -150,7 +154,14 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    TOTAL DENTAL LAB
+                  <a
+                  href="https://totaldentallab.com/home"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration:"none"}}
+                >
+                  TOTAL DENTAL LAB
+                </a>
                   </h2>
                 </div>
               </div>
@@ -169,7 +180,14 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    CAPOBRAIN
+                  <a
+                  href="https://capobrain.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration:"none"}}
+                >
+                   CAPOBRAIN
+                </a>
                   </h2>
                 </div>
               </div>
@@ -188,7 +206,14 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    LET TECHNOLOGIES
+                  <a
+                  href="https://www.lettechnologies.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration:"none"}}
+                >
+                   LET TECHNOLOGIES
+                </a>
                   </h2>
                 </div>
               </div>
@@ -207,7 +232,14 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    AL-AHAD
+                  <a
+                  href="https://alahadmarketing.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration:"none"}}
+                >
+                   AL-AHAD
+                </a>
                   </h2>
                 </div>
               </div>
@@ -228,7 +260,14 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    MOBIL FIKSERN
+                  <a
+                  href="https://mobilfiksern.no/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration:"none"}}
+                >
+                  MOBIL FIKSERN
+                </a>
                   </h2>
                 </div>
               </div>
@@ -243,7 +282,9 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    PINAR
+                  <a href="https://pinar.pk/" target="_blank" rel="noreferrer" style={{textDecoration:"none"}}>
+                  PINAR
+                </a>
                   </h2>
                 </div>
               </div>
@@ -258,7 +299,9 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    k2 LAND
+                  <a href="https://k2land.pk/" target="_blank" rel="noreferrer" style={{textDecoration:"none"}}>
+                  k2 LAND
+                </a>
                   </h2>
                 </div>
               </div>
@@ -277,7 +320,14 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    DANISH GROUP OF COMPANIES
+                  <a
+                  href="https://danishgroupco.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration:"none"}}
+                >
+                  DANISH GROUP OF COMPANIES
+                </a>
                   </h2>
                 </div>
               </div>
@@ -297,7 +347,14 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    FIRST CLICK SOLUTIONS
+                  <a
+                  href="https://firstclicksolutions.co.uk/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration:"none"}}
+                >
+                  FIRST CLICK SOLUTIONS
+                </a>
                   </h2>
                 </div>
               </div>
@@ -316,7 +373,14 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    FAROOQ GRAPHICS
+                  <a
+                  href="https://farooqgraphics.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration:"none"}}
+                >
+                  FAROOQ GRAPHICS
+                </a>
                   </h2>
                 </div>
               </div>
@@ -335,7 +399,14 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    LEGALEX GLOBAL
+                  <a
+                  href="https://legalexglobal.co.uk/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration:"none"}}
+                >
+                  LEGALEX GLOBAL
+                </a>
                   </h2>
                 </div>
               </div>
@@ -350,7 +421,9 @@ export default function Portfolio() {
                 </a>
                 <div className="section-title text-center">
                   <h2 className="mt-2" style={{ backgroundColor: "white" }}>
-                    GET WELL
+                  <a href="https://getwell.pk/" target="_blank" rel="noreferrer" style={{textDecoration:"none"}}>
+                  GET WELL
+                </a>
                   </h2>
                 </div>
               </div>

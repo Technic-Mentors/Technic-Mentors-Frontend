@@ -19,7 +19,7 @@ export default function Allposts() {
   });
   const modalRef = useRef();
   const Getallposts = async () => {
-    await fetch("https://technic-mentors-42fo.vercel.app/api/auth/getallposts", {
+    await fetch("https://technic-mentors-backend.vercel.app/api/auth/getallposts", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -33,7 +33,7 @@ export default function Allposts() {
 
   const viewPosts = async (id) => {
     await fetch(
-      `https://technic-mentors-42fo.vercel.app/api/auth/getposts/${id}`,
+      `https://technic-mentors-backend.vercel.app/api/auth/getposts/${id}`,
       {
         method: "GET",
       }
@@ -63,7 +63,7 @@ export default function Allposts() {
 
     if (isConfirmed) {
       await fetch(
-        `https://technic-mentors-42fo.vercel.app/api/auth/delposts/${id}`,
+        `https://technic-mentors-backend.vercel.app/api/auth/delposts/${id}`,
         {
           method: "DELETE",
         }
@@ -73,7 +73,7 @@ export default function Allposts() {
   };
 
   const editPosts = async (id) => {
-    await fetch(`https://technic-mentors-42fo.vercel.app/api/auth/getposts/${id}`, {
+    await fetch(`https://technic-mentors-backend.vercel.app/api/auth/getposts/${id}`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -86,7 +86,7 @@ export default function Allposts() {
     setEditPost({ ...editPost, [e.target.name]: e.target.value });
   };
   const updatePost = async () => {
-    await fetch(`https://technic-mentors-42fo.vercel.app/api/auth/editposts/${postId}`, {
+    await fetch(`https://technic-mentors-backend.vercel.app/api/auth/editposts/${postId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -109,7 +109,7 @@ export default function Allposts() {
 
   const Getcategory = async () => {
     await fetch(
-      "https://technic-mentors-42fo.vercel.app/api/auth/getcategory",
+      "https://technic-mentors-backend.vercel.app/api/auth/getcategory",
       {
         method: "GET",
       }
@@ -158,7 +158,7 @@ export default function Allposts() {
       return;
     }
 
-    const res = await fetch("https://technic-mentors-42fo.vercel.app/api/auth/changepassword", {
+    const res = await fetch("https://technic-mentors-backend.vercel.app/api/auth/changepassword", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -255,7 +255,7 @@ export default function Allposts() {
           </tr>
         </thead>
         <tbody>
-          {filteredPosts.map((posts) => {
+          {filteredPosts.slice().reverse().map((posts) => {
             return (
               <tr>
                 <td>{posts.title}</td>

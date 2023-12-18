@@ -15,7 +15,7 @@ const [password, setPassword] = useState({
 const modalRef = useRef();
 
   const postNumbers = async()=>{
-await fetch("https://technic-mentors-42fo.vercel.app/api/auth/postsCount", {
+await fetch("https://technic-mentors-backend.vercel.app/api/auth/postsCount", {
   method: "GET",
   headers:{
     "Content-Type": "application/json"
@@ -26,7 +26,7 @@ await fetch("https://technic-mentors-42fo.vercel.app/api/auth/postsCount", {
   }
 
   const categoryNumbers = async()=>{
-await fetch("https://technic-mentors-42fo.vercel.app/api/auth/categoryCount", {
+await fetch("https://technic-mentors-backend.vercel.app/api/auth/categoryCount", {
   method: "GET",
   headers:{
     "Content-Type": "application/json"
@@ -71,7 +71,7 @@ const pasError = document.getElementById("confirmpas");
       return;
     }
 
-    const res = await fetch("https://technic-mentors-42fo.vercel.app/api/auth/changepassword", {
+    const res = await fetch("https://technic-mentors-backend.vercel.app/api/auth/changepassword", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
